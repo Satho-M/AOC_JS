@@ -1,0 +1,12 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "AOC2023",
+  "main": "main",
+  "scripts": {
+    "test": "test",
+    "start": "node main.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
