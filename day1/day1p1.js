@@ -18,7 +18,7 @@ function buildNumber(str) {
 function readFile() {
     let arr = [];
     try {
-        var data = fs.readFileSync('day1input.txt', 'utf8');
+        var data = fs.readFileSync('day1/day1input.txt', 'utf8');
         let arrayStr = data.split('\n');
 
         arrayStr.forEach((str) => {
