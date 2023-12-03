@@ -20,7 +20,7 @@ function buildNumber(arrayStr){
     for(str of arrayStr){
         let values = getMaxNumberOfCubes(str);    
 
-        powerGame = powerGame + (parseInt(values.maxRed) * parseInt(values.maxBlue) * parseInt(values.maxGreen))
+        powerGame = powerGame + (values.maxRed * values.maxBlue * values.maxGreen)
         console.log("Game ID:" + values.gameId + " Red: " + values.maxRed + " » " + gcRed + " Blue: " + values.maxBlue + " » " + gcBlue + " Green: " + values.maxGreen+ " » " + gcGreen);
     }   
 
@@ -33,7 +33,6 @@ function getMaxNumberOfCubes(str){
     const matches = str.matchAll(pattern);
 
     for (const match of matches) {
-        gameId = match[1];
         const gameInfo = match[2];
 
         const rounds = gameInfo.split(';');
@@ -50,7 +49,7 @@ function getMaxNumberOfCubes(str){
             }            
         }
     }
-    return {maxGreen, maxBlue, maxRed, gameId};
+    return {maxGreen, maxBlue, maxRed};
 }
 
 console.log(readFile());
